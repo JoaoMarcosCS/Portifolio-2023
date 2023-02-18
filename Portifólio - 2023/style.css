@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    display: flex;/*o display é como se fosse uma chave que vai permitir a responsividade(flex)*/
+    flex-direction: row;/*o flex direction permite a direção que os itens vão se "alongar", em linha ou coluna*/
+    background-color: #1a1717;
+    height: 60px;
+    justify-content: space-around;/*ALINHAMENTO HORIZONTAL*/
+    /*alinhamento horizontal
+    flex-start = alinha da diretia para esquerda
+    flex-end = da esqueda para direita
+    center = alinha no centro
+    space-between = coloca espaço no itens para fiquem
+    afastados e colados nas extremidades
+    space-around = cria os espaçamentos iguais, tanto 
+    entre os itens quanto nas extremidades
+    */
+    align-items:center;/*ALINHAMENTO VERTICAL*/
+    /*faz o alinhameto vertical
+    strecht = faz com que todos os itens tenham o mesmo heigth
+    até o limite do elemteno o qual está inserido
+    flex-start = coloca os itens no topo do conteiner, acabando
+    com a o seu heigth
+    flex-end = coloca os itens no final do conteiner,  e também aca
+    ba com o seu heitgh
+    center = também acaba com o height mas coloca o item no meio do eixo
+    vertical do conteiner
+    baseline = faz o alinhamento do item mesmo que ele tenha algum margin ou padding
+    */
+}
+
+.menubar_responsivo, .icone_menubar{
+    display: none;
+}
+
+.menubar{
+    display: flex;
+}
+
+.menubar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+
+/*!IMPORTANTE
+Se for colocado o padding, a responsividade não
+irá funcionar, mas se colocado o margin,
+a responsividade será adicionada sem problema
+
+*/
+
+.texto_portifolio{
+    color: #fcfcfc;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.menubar ul li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.menubar ul li a{
+    text-decoration: none;
+    color:#fcfcfc;
+    font-size: 21.5px;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.menubar ul li a::after{
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    transform: scale(0,1);
+    background-color: #d60471;
+    transition: ease 0.4s;
+}
+.menubar ul li a:hover{
+    color: #d60471;
+    font-weight: 800;
+}
+.menubar ul li a:hover::after{
+    transform: scale(1,1);
+    
+}
+
+
+.icones_temas i:nth-child(1){
+    color: #e0ae07;
+    font-size: 25px;
+}
+
+.icones_temas i:last-child{
+    color: #027dc9;
+    font-size: 25px;
+    
+}
+
+
+.apresentacao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px 60px 0px;
+    background-color: #2f3030;
+    
+}
+
+.apresentacao .apresentacao_container{
+    width: 90%;
+    background-color: #e6e8e8;
+    box-shadow: 2px 2px 10px #0f0f0f;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.apresentacao .apresentacao_texto{
+    font-size: 45px;
+    color: #1a1717;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
+}
+
+.apresentacao .apresentacao_foto{
+ 
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.sobre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #66f3fa;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;/*aplica nos itens dentro da div*/
+    /*margin-top: 100px; aplica na div*/
+    padding-bottom: 50px;
+    
+}
+.sobre .sobre_titulo{
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 100px;
+    
+
+}
+
+.sobre .sobre_titulo p{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration:underline #05eb68;
+    letter-spacing: 2px;
+    color: #1b1c1c;
+}
+
+.sobre .sobre_texto{
+    font-size: 20px;
+    margin-top: 15px;
+    width: 50%;
+    margin-right: 100px;
+   
+}
+
+.sobre .sobre_texto p{
+    width: 130%;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    color:#1b1c1c;
+}
+
+.formacao{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top:50px ;
+    padding: 100px 0px 50px 0px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    color: #e6e8e8;
+   
+}
+
+
+.formacao .formacao_titulo{
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.formacao .formacao_titulo p{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: underline #0f04b3;
+    letter-spacing: 2px;
+}
+
+.formacao .formacao_texto{
+    flex-wrap: wrap;
+    display:grid;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.formacao .formacao_texto p{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8ab02;
+    padding-top: 80px;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.projetos .projetos_titulo{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    
+}
+
+.projetos .projetos_titulo p{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: underline #e63d05;
+    letter-spacing: 2px;
+}
+
+.projetos .projetos_cards{
+    width: 100%;
+    padding-top: 50px;
+    display:flex;
+    flex-wrap: wrap;
+    width: 98%;
+    background-color: #0063ed;
+    border-radius: 8px;
+    padding: 20px 0px 20px 0px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.projetos .projetos_cards .card_projeto{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px #0f0f0f;
+    flex-direction: column;
+    background-color: #d60471;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 10px;
+    margin-top: 20px;
+    transition: ease 0.5s;
+}
+.projetos .projetos_cards .card_projeto:hover{
+    margin-top: -1px;
+}
+
+.projetos .projetos_cards .card_projeto img{
+    height: 300px;
+    width: 620px;
+    border-radius: 10px;
+    transition: ease 0.5s;
+    
+}
+
+
+.projetos .projetos_cards .card_projeto a{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #1a1717;
+    font-size: 20px;
+    font-weight: 600;
+    transition:  0.5s all;
+}
+.projetos .projetos_cards .card_projeto a:hover{
+    text-decoration: underline;
+}
+
+.contato{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f22727;
+    padding: 50px 0px 50px 0px;/*superior, direita, inferior, esquerda*/
+
+}
+
+.contato .contato_container{
+    width: 50%;
+    background-color: #02c726;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 10px #0f0f0f;
+    flex-direction: column;
+    border-radius: 32px;
+    border: none;
+    padding-top: 30px;
+}
+
+.contato .contato_titulo{
+    width: 50%;
+    display: flex;
+    margin-bottom: -50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contato .contato_titulo p{
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: underline #cef542;
+}
+
+.contato .contato_texto{
+    padding-bottom: 50px;
+    width: 50%;
+}
+
+.contato .contato_texto p:nth-child(1){
+    text-decoration: underline #cef542;
+}
+
+.contato .contato_texto a{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color:#1a1717;
+}
+
+/*
+.contato .contato_texto div:nth-child(1) p:nth-child(1){
+}*/
+
+.contato .contato_texto #email_contato{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color:#1a1717;
+}
+/*
+.contato .contato_texto div:nth-child(2) a{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color:#1a1717;
+}
+
+
+.contato .contato_texto div:nth-child(3) a{
+    text-decoration: none;
+    color: #1a1717;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+*/
+.contato .contato_texto p{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: underline #cef542;
+    font-weight: 700;
+}
+
+.contato .contato_texto img{
+    width: 30px;
+    height: 30px;
+    margin-top: 100px;
+    border-radius: 4px;
+}
